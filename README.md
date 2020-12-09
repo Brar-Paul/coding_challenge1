@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SmartLock API endpoint
 
-Things you may want to cover:
+Request Path:
+POST '/upload'
 
-* Ruby version
+Request Configuration:
+  Headers: Pass the server codename and access_token (provided during initialization) 
+  For example:
+  Codename: key = X-Server-CodeName value = {Your server codename}
+  AccessToken: key = X-Server-AccessToken value = {Your server access_token}
 
-* System dependencies
+Body: Pass the csv file containing the report under "data" as the key name.
+  For example: 
+  key = data value = {the csv file you wish to upload}
 
-* Configuration
+Once you send the HTTP request, our app will translate and store the data on our database for you to access at anytime. 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
